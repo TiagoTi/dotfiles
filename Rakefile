@@ -4,16 +4,11 @@ require File.join(File.dirname(__FILE__), 'bin', 'yadr', 'vundle')
 
 desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
-  puts
-  puts "======================================================"
-  puts "Welcome to YADR Installation."
-  puts "======================================================"
-  puts
-
+  welcome_message
   install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
   install_rvm_binstubs
 
-  # this has all the runcoms from this directory.
+  # this has all the runcoms (run commands) from this directory.
   install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
   install_files(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   install_files(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
@@ -367,4 +362,12 @@ def success_msg(action)
   puts "  (_______\_____|\____|_|      "
   puts ""
   puts "YADR has been #{action}. Please restart your terminal and vim."
+end
+
+def welcome_message
+  puts
+  puts "======================================================"
+  puts "Welcome to YADR Installation."
+  puts "======================================================"
+  puts
 end

@@ -1,5 +1,7 @@
 # set your user tokens as environment variables, such as ~/.secrets
 # See the README for examples.
+[core]
+  excludesfile = .gitignore-personal
 [color]
   ui = true
 [color "branch"]

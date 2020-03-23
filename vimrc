@@ -119,3 +119,25 @@ set nomodeline
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+set relativenumber
+set cursorline
+
+"Enable: Auto Ident
+set ai
+
+"enable ç to enter in command mode
+:map ç :
+
+"Show (partial) command in the last line of the screen.
+set showcmd
+
+"Auto load NERDTRee
+"autocmd vimenter * NERDTree
+
+"Show hidden files in NERDTRee
+let NERDTreeShowHidden=1
+
+"Per-directory .vimrc files
+set exrc
+set secure
