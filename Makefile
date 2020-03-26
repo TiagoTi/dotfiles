@@ -3,8 +3,9 @@ run: build_container
 
 
 build_container: remove_container
+	@eval "docker build --file DockerfileBaseDev -t basedev:v0 ."
 	@sed "s/\([0-9]\+\)/$(date +%y%m%d%H%M%S)/" Dockerfile
-	@docker build --rm -t yard:v0 .
+	@docker build --rm --no-cache -t yard:v0 .
 
 
 remove_container:
