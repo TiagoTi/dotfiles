@@ -141,3 +141,5 @@ let NERDTreeShowHidden=1
 "Per-directory .vimrc files
 set exrc
 set secure
+
+"Happy Hunger Games! And may the odds be ever in your favor.

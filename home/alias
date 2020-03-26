@@ -1,0 +1,15 @@
+alias ae='vim ~/.alias'
+alias al='. ~/.alias'
+alias cdservices='cd /mnt/hd_um_tera/tiago/services'
+
+alias executable='export PATH=$PATH:$PWD'
+alias exe='executable'
+alias q='exit'
+# abilita copiar e colar
+alias copy="xclip -rmlastnl -selection clipboard"
+alias past="xclip -o -rmlastnl -selection clipboard"
+#https://stackoverflow.com/questions/57415335/how-to-copy-on-xclip-and-see-the-command-out    put-on-the-shell
+alias grepc='grep -ic'
+alias ved='vim ~/.vimrc'
+alias tm='tmux'
+alias tmi='tmuxinator'
